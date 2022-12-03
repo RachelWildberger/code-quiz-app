@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Code Quiz App</title>
+  </head>
+  <body>
+
+<div class="container">
+      
+ <!--- Starting Section --> 
+        <div id="start">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the following code-related questions within the time limit. 
+              Keep in mind that incorrect answers will penalize your score/time by 10 seconds.</p>
+
+          <div id="button">
+              <button id="start-quiz">Start Quiz</button>
+              <button id="highscores">High Scores</button>
+          </div>
+       </div>
+     
+<!--- Quiz Questions --> 
+<div id="questionContainer" class="hidden">
+      <div id="question">
+         <h2 id="questionNo">1. </h2>
+         <h2 id="questionText"> This is a test question?</h2>
+      </div>
+
+      <div id="optionList">
+        <button class="choiceOptions" data-state="answer" id="option1">Answer number 1</button>
+        <button class="choiceOptions" data-state="answer" id="option2">Answer number 2</button>
+        <button class="choiceOptions" data-state="answer" id="option3">Answer number 3</button>
+        <button class="choiceOptions" data-state="answer" id="option4">Answer number 4</button>
+      </div>
+
+<!--- Answers Section --> 
+
+      <div id="answersSection">
+          <h3 id="total-correct"> 1 of 4 Questions</h3>
+          <button id="next-question">Next</button>
+      </div>
+
+<!--- Results Section --> 
+</div> 
+</div>
+<script src="assets/js/questions.js"></script>  
+<script src="assets/js/script.js"></script>  
+
+</body>
+</html>
