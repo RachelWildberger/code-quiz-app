@@ -8,12 +8,14 @@ Create a timed quiz using javaScript, HTML, and CSS fundamentals, storing high s
 - Once user enters quiz they have 100 seconds to complete the quiz, entering incorrect answers deducts 10 seconds from their score. 
 - Upon completion of quiz user will be able to save name in the list of high scores. 
 
+![Quiz App Wire Frame](./assets/images/WireFrame-code%20quiz.jpg)
+
 ## Work in progress
 
 This project is a work in progress. Features still being implemented are;
-- 
-- 
-- 
+- "High Scores" button on click to show highScoresContainer with ability to see high scores and save name using local storage.
+- color change on correct or incorrect button click
+- at the end of quiz highScoresContainer will load with ability to see high scores and add user name to the list 
 
 
 ## Installation
