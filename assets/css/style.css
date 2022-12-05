@@ -131,6 +131,33 @@ p {
     transition: transform 1s;
 }
 
+#saveScore {
+    font-size: 20px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    color: #333132;
+    background: #db9f88;
+    border-radius: 15px;
+}
+
+#saveScore:hover {
+    cursor: pointer;
+    box-shadow: 10px 5px 5px #c7cace;
+    transition: transform 1s;
+}
+
+#highScoreContainer {
+    height: 400px;
+    color: #333132; 
+    margin-bottom: 40px;
+    padding: 25px;
+    text-align: center;
+}
+
+
+
 .correct {
     background: #02bd6f;
 }

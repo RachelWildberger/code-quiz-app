@@ -1,34 +1,26 @@
 # code-quiz-app
 
-## Description
+## Project Scope
 
-Created an application that the user can generate a random password based on criteria they've selected. This app runs in the browser, and features HTML, CSS, and is powered by JavaScript code.
+Create a timed quiz using javaScript, HTML, and CSS fundamentals, storing high scores using local storage. 
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+- The main screen you can see two buttons with "Start Quiz" and "High Scores". Start Quiz button takes user to start the timed quiz. High Scores takes user to the saved high scores page.
+- Once user enters quiz they have 100 seconds to complete the quiz, entering incorrect answers deducts 10 seconds from their score. 
+- Upon completion of quiz user will be able to save name in the list of high scores. 
 
-## Table of Contents (Optional)
+## Work in progress
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
+This project is a work in progress. Features still being implemented are;
+- 
+- 
+- 
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Visiting https://rachelwildberger.github.io/code-quiz-app/ will get you started to play the code quiz game.
 
-## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
-
-![alt text](assets/images/screenshot.png)
 
 ## Credits
 
@@ -37,5 +29,3 @@ List your collaborators, if any, with links to their GitHub profiles.
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 
 If you followed tutorials, include links to those here as well.
-
-## License

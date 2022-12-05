@@ -12,8 +12,10 @@ var questionText = document.querySelector("#questionText");
 var optionList = document.querySelectorAll("#optionList");
 var choiceOptions = document.querySelectorAll(".choiceOptions");
 var questionContainer = document.querySelector("#questionContainer");
+var highScoreContainer = document.querySelector("#highScoreContainer");
 
 var answers = document.querySelector("#answersSection");
+var totalCorrect = document.querySelector("#totalCorrect");
 var time = document.querySelector("#time");
 
 var option1 = document.querySelector("#option1");
@@ -45,7 +47,6 @@ var timer = 100;
     startQuizButton.addEventListener("click", function(){
         start.style.display = "none";
     });
-    var buttons = document.querySelectorAll("#optionList")
 
 // load questions 
     var loadQuestions = function() {
@@ -85,7 +86,7 @@ var timer = 100;
 
 // answers section
 
-var correctAnswer = true;
+// var correctAnswer = true;
 
         function answerClick(event) {
             var choice = event.target;
@@ -120,3 +121,18 @@ var correctAnswer = true;
             container.setAttribute("class", "hidden");
         }
         });
+        highScoreContainer.addEventListener("click", function(){
+            start.style.display = "none";
+    
+    });
+
+    // load High Score section
+function highScorePage() {
+    var x = getElementById("start");
+    if(x.style.display === "none") {
+        x.style.display = "block";
+    }
+    else {
+        x.style.display = "none";
+    }
+    };
