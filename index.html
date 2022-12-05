@@ -34,7 +34,6 @@
         <button class="choiceOptions" id="option3"></button>
         <button class="choiceOptions" id="option4"></button>
       </div>
-
 <!--- Timer Section --> 
 
 <div id="timerContainer">
@@ -42,6 +41,8 @@
       <h3>Time Left:</h3>
       <h3 id="time"></h3>
   </div>
+</div>
+</div> 
 
   <!--- Answers Section --> 
 
@@ -52,20 +53,19 @@
   <!--- High Scores -->
 
 <div id="highScoreContainer" class="hidden">
-  <div id="end" class="">
-      <h1 id="finalScore">0</h1>
+      <h1 id="finalScore"></h1>
           <form class="form">
               <h2 id="end-text">Enter your name below to save your score!</h2>
               <input type="text" name="name" id="username" placeholder="Enter your name">
-              <button id="saveScore" type="submit"
-               onClick="saveHighScore(event)">Save</button>
+              <button id="saveScore" type="submit">Save High Score</button>
+              <div id="msg"></div>
           </form>
   </div>
-
+</div>
   <div id="score" class="active">
 </div>
 
-</div> 
+
 </div>
 <script src="assets/js/questions.js"></script>  
 <script src="assets/js/script.js"></script>  

@@ -1,38 +1,39 @@
+// start game
 var start = document.querySelector("#start");
 var container = document.querySelector(".container");
-
 var startQuizButton = document.querySelector("#start-quiz");
+var time = document.querySelector("#time");
+
+// high score
 var highScoresButton = document.querySelector("#highscores");
+var saveScoreButton = document.querySelector("#saveScore");
+var msgDiv = document.querySelector("#msg");
+var highScoreContainer = document.querySelector("#highScoreContainer");
+var usernameSpan = document.querySelector("#username");
 
-
+// questions
 var question = document.querySelector("question");
 var questionNo = document.querySelector("#questionNo");
 var questionText = document.querySelector("#questionText");
+var nextQuestion = document.querySelector("#next-question");
 
+// answer options
 var optionList = document.querySelectorAll("#optionList");
 var choiceOptions = document.querySelectorAll(".choiceOptions");
 var questionContainer = document.querySelector("#questionContainer");
-var highScoreContainer = document.querySelector("#highScoreContainer");
-
-var answers = document.querySelector("#answersSection");
-var totalCorrect = document.querySelector("#totalCorrect");
-var time = document.querySelector("#time");
 
 var option1 = document.querySelector("#option1");
 var option2 = document.querySelector("#option2");
 var option3 = document.querySelector("#option3");
 var option4 = document.querySelector("#option4");
 
-var nextQuestion = document.querySelector("#next-question");
+// var answers = document.querySelector("#answersSection");
+
 
 var questionInProgress = false;
-var checkHighScore = false;
-
-var currentQuestion = 0;
-var score = 0;
 var index = 0;
 var correct = 0;
-var timer = 100;
+var timer = 60;
 
 
 // when the start button clicks
@@ -57,8 +58,6 @@ var timer = 100;
         option3.innerText = questions[index].option3;
         option4.innerText = questions[index].option4;
      }
-
-
 
 // start quiz starts timer
     startQuizButton.addEventListener("click", function(){
@@ -85,9 +84,6 @@ var timer = 100;
 
 
 // answers section
-
-// var correctAnswer = true;
-
         function answerClick(event) {
             var choice = event.target;
             console.log(choice.textContent);
@@ -114,25 +110,45 @@ var timer = 100;
 
 
 // high Scores button
-    highScoresButton.addEventListener("click", function() {
-        console.log('click');
-        if (checkHighScore === false) {
-            checkHighScore = true;
-            container.setAttribute("class", "hidden");
-        }
-        });
-        highScoreContainer.addEventListener("click", function(){
-            start.style.display = "none";
-    
+highScoresButton.addEventListener("click", function() {
+    console.log('click');
+
+    highScoreContainer.setAttribute("class", "visible");
+    }
+);
+
+    highScoresButton.addEventListener("click", function(){
+        start.style.display = "none";
     });
 
-    // load High Score section
-function highScorePage() {
-    var x = getElementById("start");
-    if(x.style.display === "none") {
-        x.style.display = "block";
+
+
+
+// local storage
+    function displayMessage(type, message) {
+    msgDiv.textContent = message;
+    msgDiv.setAttribute("class", type);
     }
-    else {
-        x.style.display = "none";
-    }
-    };
+
+
+    function renderLastRegistered() {
+        var username = localStorage.getItem("username");
+        usernameSpan.textContent = username;
+      }
+      
+      saveScoreButton.addEventListener("click", function(event) {
+        event.preventDefault();
+      
+        var username = document.querySelector("#username").value;
+      
+        if (username === "") {
+          displayMessage("error", "Name can not be blank");
+        } else {
+          displayMessage("success", "High score logged successfully");
+      
+        // TODO: Save email and password to localStorage and render the last registered user
+      
+        localStorage.setItem("username", username);
+        renderLastRegistered();
+        }
+      });
