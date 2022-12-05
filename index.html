@@ -15,9 +15,9 @@
         <div id="start">
             <h1>Coding Quiz Challenge</h1>
             <p>Try to answer the following code-related questions within the time limit. 
-              Keep in mind that incorrect answers will penalize your score/time by 10 seconds.</p>
+              If you answer any questions incorrectly the quiz will deduct your time by 10 seconds.</p>
 
-          <div id="button">
+          <div id="button" class="visible">
               <button id="start-quiz">Start Quiz</button>
               <button id="highscores">High Scores</button>
           </div>
@@ -26,25 +26,29 @@
 <!--- Quiz Questions --> 
 <div id="questionContainer" class="hidden">
       <div id="question">
-         <h2 id="questionNo">1. </h2>
-         <h2 id="questionText"> This is a test question?</h2>
+         <h2 id="questionNo"></h2>
+         <h2 id="questionText"></h2>
       </div>
 
-      <div id="optionList">
-        <button class="choiceOptions" data-state="answer" id="option1">Answer number 1</button>
-        <button class="choiceOptions" data-state="answer" id="option2">Answer number 2</button>
-        <button class="choiceOptions" data-state="answer" id="option3">Answer number 3</button>
-        <button class="choiceOptions" data-state="answer" id="option4">Answer number 4</button>
+      <div id="optionList" class="hidden">
+        <button class="choiceOptions" id="option1"></button>
+        <button class="choiceOptions" id="option2"></button>
+        <button class="choiceOptions" id="option3"></button>
+        <button class="choiceOptions" id="option4"></button>
       </div>
 
-<!--- Answers Section --> 
+<!--- Timer Section --> 
 
-      <div id="answersSection">
-          <h3 id="total-correct"> 1 of 4 Questions</h3>
-          <button id="next-question">Next</button>
-      </div>
+<div id="timerContainer">
+  <div id="timer">
+      <h3>Time Left:</h3>
+      <h3 id="time"></h3>
+  </div>
 
-<!--- Results Section --> 
+  <!--- Answers Section --> 
+
+
+
 </div> 
 </div>
 <script src="assets/js/questions.js"></script>  
